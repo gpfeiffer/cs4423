@@ -1,0 +1,33 @@
+\documentclass[12pt]{amsart}
+
+\usepackage[euler-digits]{eulervm}
+\usepackage{amssymb}
+
+\renewcommand{\emptyset}{\varnothing}
+
+\begin{document}
+To visit all nodes of a tree with root $x$.\\[1ex]
+
+\noindent
+\begin{minipage}{0.45\linewidth}
+  \textbf{BFS}: Use a queue $Q$.
+  \begin{itemize}
+  \item $Q \gets (x)$
+  \item while $Q \neq \emptyset$:
+  \item[] \quad $y \gets Q$.pop()
+  \item[] \quad visit($y$)
+  \item[] \quad $Q$.push($y$.children)
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+  \textbf{DFS}: Use a stack $S$.
+  \begin{itemize}
+  \item $S \gets (x)$
+  \item while $S \neq \emptyset$:
+  \item[] \quad $y \gets S$.pop()
+  \item[] \quad visit($y$)
+  \item[] \quad $S$.push($y$.children)
+  \end{itemize}
+\end{minipage}
+\end{document}
